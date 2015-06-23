@@ -36,7 +36,11 @@ module.exports = generators.Base.extend({
       // Set up project configuration and dotfiles.
       this.copy('_editorconfig', '.editorconfig');
       this.copy('_gitignore', '.gitignore');
+      this.copy('_entry.json', 'entry.json');
+      this.copy('_gruntfile.js', 'gruntfile.js');
       this.template('_package.json', 'package.json');
+      this.template('_bower.json', 'bower.json');
+      this.template('_bowerrc', '.bowerrc');
       this.template('_readme.md', 'README.md');
       this.template('_env.example', '.env.example');
       this.template('_env.example', '.env');
@@ -45,6 +49,9 @@ module.exports = generators.Base.extend({
       this.copy('server/server.es6');
       this.copy('server/routes/home.es6');
       this.template('server/views/home.html');
+
+      // Set up the client.
+      this.directory('client/');
     }
   }
 });

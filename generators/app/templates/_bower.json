@@ -1,0 +1,8 @@
+{
+  "name": "<%= appName %>",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "3.3.5"
+  }
+}

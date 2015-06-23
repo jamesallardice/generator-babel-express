@@ -1,0 +1,36 @@
+[
+  {
+    "handle": "grunt",
+    "spawn": {
+      "command": "grunt"
+    }
+  },
+  {
+    "handle": "gruntWatch",
+    "spawn": {
+      "command": "grunt",
+      "args": [
+        "watch"
+      ]
+    },
+    "stdinPrefix": "gruntWatch",
+    "waitOn": "grunt"
+  },
+  {
+    "handle": "nodemon",
+    "spawn": {
+      "command": "nodemon",
+      "args": [
+        "--exec",
+        "node_modules/.bin/babel-node",
+        "-w",
+        "server",
+        "-e",
+        "es6,js,json,html",
+        "server/server.es6"
+      ]
+    },
+    "stdinPrefix": "nd",
+    "waitOn": "grunt"
+  }
+]
