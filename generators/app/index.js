@@ -12,12 +12,18 @@ module.exports = generators.Base.extend({
         message: 'What\'s the name of the app? This is used in package.json.',
         default: 'example-app',
       },
+      {
+        name: 'appPort',
+        message: 'What port should the server run on?',
+        default: Math.floor(Math.random() * 8000) + 2000,
+      }
     ];
 
     this.log('Welcome to the Express/Babel app generator!');
     this.prompt(prompts, function ( data ) {
 
       this.appName = _.kebabCase(data.appName);
+      this.appPort = data.appPort;
 
       done();
     }.bind(this));
@@ -32,6 +38,13 @@ module.exports = generators.Base.extend({
       this.copy('_gitignore', '.gitignore');
       this.template('_package.json', 'package.json');
       this.template('_readme.md', 'README.md');
+      this.template('_env.example', '.env.example');
+      this.template('_env.example', '.env');
+
+      // Set up the app server.
+      this.copy('server/server.es6');
+      this.copy('server/routes/home.es6');
+      this.template('server/views/home.html');
     }
   }
 });
