@@ -26,7 +26,12 @@ module.exports = generators.Base.extend({
   writing: {
 
     app: function () {
+
+      // Set up project configuration and dotfiles.
+      this.copy('_editorconfig', '.editorconfig');
+      this.copy('_gitignore', '.gitignore');
       this.template('_package.json', 'package.json');
+      this.template('_readme.md', 'README.md');
     }
   }
 });
