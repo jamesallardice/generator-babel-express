@@ -3,6 +3,9 @@
   "description": "A Yeoman generator for scaffolding Express apps in ES2015 with Babel",
   "author": "James Allardice <james@jangle.io>",
   "version": "0.1.0",
+  "scripts": {
+    "test": "mocha"
+  },
   "files": [
     "app"
   ],
@@ -12,5 +15,8 @@
   "dependencies": {
     "lodash": "^3.9.3",
     "yeoman-generator": "^0.20.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
   }
 }
