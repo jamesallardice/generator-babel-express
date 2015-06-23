@@ -1,0 +1,14 @@
+{
+  "name": "<%= appName %>",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "server": "babel-node server/server.es6"
+  },
+  "dependencies": {
+    "babel": "^5.6.4",
+    "core-js": "^0.9.18",
+    "express": "^4.13.0"
+  },
+  "devDependencies": {}
+}
