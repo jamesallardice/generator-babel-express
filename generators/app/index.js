@@ -16,7 +16,7 @@ module.exports = generators.Base.extend({
         name: 'appPort',
         message: 'What port should the server run on?',
         default: Math.floor(Math.random() * 8000) + 2000,
-      }
+      },
     ];
 
     this.log('Welcome to the Express/Babel app generator!');
@@ -52,6 +52,6 @@ module.exports = generators.Base.extend({
 
       // Set up the client.
       this.directory('client/');
-    }
-  }
+    },
+  },
 });
