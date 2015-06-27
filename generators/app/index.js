@@ -36,6 +36,7 @@ module.exports = generators.Base.extend({
       // Set up project configuration and dotfiles.
       this.copy('_editorconfig', '.editorconfig');
       this.copy('_gitignore', '.gitignore');
+      this.copy('_eslintrc', '.eslintrc');
       this.copy('_entry.json', 'entry.json');
       this.copy('_gruntfile.js', 'gruntfile.js');
       this.template('_package.json', 'package.json');

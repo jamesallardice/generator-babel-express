@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": [ 2, "always-multiline" ],
+    "quotes": [ 2, "single" ],
+    "no-use-before-define": [ 2, "nofunc" ],
+    "strict": 0
+  },
+  "env": {
+    "node": true
+  }
+}
